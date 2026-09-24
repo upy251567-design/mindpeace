@@ -481,7 +481,7 @@ responseMessage.textContent =
 */
 
 
-/*
+
 function createMoodParticles(card) {
 
     const symbols = [
@@ -543,7 +543,7 @@ function createMoodParticles(card) {
 
 
 
-*/
+/*
 
 function createMoodParticles(card) {
 
@@ -609,7 +609,7 @@ function createMoodParticles(card) {
 
 
 
-
+*/
 
 
 /* =========================================================
