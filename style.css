@@ -2050,3 +2050,53 @@ body.celebration {
         display: none;
     }
 }
+
+
+
+
+/* =========================================================
+   MOBILE FLOWER PARTICLES FIX
+   ========================================================= */
+
+.mood-particle {
+    position: fixed !important;
+    z-index: 99999 !important;
+    pointer-events: none;
+
+    display: block;
+    opacity: 0;
+
+    font-size: 18px;
+    line-height: 1;
+
+    will-change: transform, opacity;
+
+    animation:
+        moodParticleFloat var(--duration) ease-out forwards;
+}
+
+@keyframes moodParticleFloat {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0.5) rotate(0deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate3d(var(--x), var(--y), 0)
+            scale(1.25)
+            rotate(180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .mood-particle {
+        font-size: 20px !important;
+        z-index: 99999 !important;
+    }
+}

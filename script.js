@@ -424,7 +424,7 @@ responseMessage.textContent =
    MOOD PARTICLES
    ========================================================= */
 
-function createMoodParticles(card) {
+ /*function createMoodParticles(card) {
 
     const symbols = [
         "♡",
@@ -477,6 +477,77 @@ function createMoodParticles(card) {
         }, 2600);
     }
 }
+
+*/
+
+
+
+function createMoodParticles(card) {
+
+    const symbols = [
+        "🌸",
+        "🌷",
+        "🌸",
+        "♡",
+        "✦",
+        "✨"
+    ];
+
+    const rect = card.getBoundingClientRect();
+
+    for (let i = 0; i < 14; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.className = "mood-particle";
+
+        particle.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        // Start from the center of the clicked card
+        const startX = rect.left + rect.width / 2;
+        const startY = rect.top + rect.height / 2;
+
+        particle.style.left = `${startX}px`;
+        particle.style.top = `${startY}px`;
+
+        // Random movement
+        const moveX =
+            (Math.random() - 0.5) * 220;
+
+        const moveY =
+            -80 - Math.random() * 160;
+
+        particle.style.setProperty(
+            "--x",
+            `${moveX}px`
+        );
+
+        particle.style.setProperty(
+            "--y",
+            `${moveY}px`
+        );
+
+        particle.style.setProperty(
+            "--duration",
+            `${1.3 + Math.random() * 1.2}s`
+        );
+
+        document.body.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 2800);
+    }
+}
+
+
+
+
+
+
+
+
 
 
 /* =========================================================
