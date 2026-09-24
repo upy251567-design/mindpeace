@@ -1999,6 +1999,7 @@ body.celebration {
 }
 
 /* Floating particles */
+/*
 .mood-particle {
     position: fixed;
     z-index: 20;
@@ -2034,6 +2035,70 @@ body.celebration {
             rotate(180deg);
     }
 }
+*/
+
+
+
+/* =========================================================
+   FLOWER EFFECT — MOBILE + DESKTOP
+   ========================================================= */
+
+.mood-particle {
+    position: fixed !important;
+    z-index: 999999 !important;
+    pointer-events: none !important;
+
+    display: block !important;
+
+    font-size: 22px;
+    line-height: 1;
+
+    opacity: 0;
+
+    will-change: transform, opacity;
+
+    animation: flowerFloat 2.8s ease-out forwards;
+}
+
+@keyframes flowerFloat {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate3d(0, 0, 0)
+            scale(0.4)
+            rotate(0deg);
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate3d(var(--x), var(--y), 0)
+            scale(1.25)
+            rotate(220deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mood-particle {
+        font-size: 24px !important;
+    }
+}
+
+
+
+
+
+
 
 /* Mobile */
 @media (max-width: 768px) {

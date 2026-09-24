@@ -481,7 +481,7 @@ responseMessage.textContent =
 */
 
 
-
+/*
 function createMoodParticles(card) {
 
     const symbols = [
@@ -543,7 +543,69 @@ function createMoodParticles(card) {
 
 
 
+*/
 
+function createMoodParticles(card) {
+
+    const flowers = [
+        "🌸",
+        "🌷",
+        "🌸",
+        "🌷",
+        "🌺",
+        "✨",
+        "♡"
+    ];
+
+    const rect = card.getBoundingClientRect();
+
+    for (let i = 0; i < 18; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.className = "mood-particle";
+
+        particle.textContent =
+            flowers[Math.floor(Math.random() * flowers.length)];
+
+        // Start from the clicked card
+        const startX =
+            rect.left + rect.width / 2;
+
+        const startY =
+            rect.top + rect.height / 2;
+
+        particle.style.left = `${startX}px`;
+        particle.style.top = `${startY}px`;
+
+        // Random horizontal movement
+        const moveX =
+            (Math.random() - 0.5) * 260;
+
+        // Move upward
+        const moveY =
+            -100 - Math.random() * 220;
+
+        particle.style.setProperty(
+            "--x",
+            `${moveX}px`
+        );
+
+        particle.style.setProperty(
+            "--y",
+            `${moveY}px`
+        );
+
+        particle.style.animationDelay =
+            `${Math.random() * 0.25}s`;
+
+        document.body.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 3300);
+    }
+}
 
 
 
