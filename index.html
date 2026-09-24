@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A little place made to bring a little happiness.">
+
+    <title>A Little Place for You 🌷</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- BACKGROUND EFFECTS -->
+    <!-- ============================= -->
+
+    <div class="background">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+
+        <div class="stars">
+            <span>✦</span>
+            <span>✧</span>
+            <span>⋆</span>
+            <span>✦</span>
+            <span>·</span>
+            <span>✧</span>
+            <span>⋆</span>
+            <span>·</span>
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- MUSIC -->
+    <!-- ============================= -->
+
+    <audio id="bgMusic" loop>
+        <source src="music/song.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+
+    <!-- ============================= -->
+    <!-- MUSIC CONTROL -->
+    <!-- ============================= -->
+
+
+<button
+    class="music-control"
+    id="musicControl"
+    aria-label="Toggle background music"
+    aria-pressed="false"
+>
+    <span class="music-disc" id="musicDisc">♫</span>
+
+    <span class="music-info">
+        <span class="music-status" id="musicText">Music Off</span>
+        <span class="music-subtitle">a little soundtrack</span>
+    </span>
+</button>
+
+
+
+
+    <!-- ============================= -->
+    <!-- MAIN WEBSITE -->
+    <!-- ============================= -->
+
+    <main id="mainContent">
+
+
+        <!-- ========================= -->
+        <!-- WELCOME SECTION -->
+        <!-- ========================= -->
+
+        <section class="screen welcome-screen" id="welcomeScreen">
+
+            <div class="welcome-content">
+
+                <div class="small-label">
+                    ✦ a tiny corner made for you ✦
+                </div>
+
+                <h1>
+                    A Little
+                    <span>Place for You</span>
+                </h1>
+
+                <p class="welcome-text">
+                    Just a little something...
+                    <br>
+                    to make your day a bit brighter.
+                </p>
+
+                <button class="primary-button" id="enterButton">
+                    <span>Enter</span>
+                    <span class="button-icon">✦</span>
+                </button>
+
+                <p class="hint">
+                    take a little breath first 🌷
+                </p>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- MESSAGE SECTION -->
+        <!-- ========================= -->
+
+        <section class="screen message-screen" id="messageScreen">
+
+            <div class="section-container">
+
+                <div class="section-label">
+                    <span>01</span>
+                    a little message
+                </div>
+
+                <div class="message-card">
+
+                    <div class="card-decoration top-left">✦</div>
+                    <div class="card-decoration top-right">✧</div>
+
+                    <div class="flower-symbol">
+                        🌷
+                    </div>
+
+                    <h2>
+                        Hey, you...
+                    </h2>
+
+                    <div class="divider">
+                        <span></span>
+                        ✦
+                        <span></span>
+                    </div>
+
+                    <p id="mainMessage">
+                        I don't know exactly what you're going through
+                        right now...
+                    </p>
+
+                    <p>
+                        But I thought maybe you could use
+                        a tiny little corner where you can
+                        forget everything for a moment.
+                    </p>
+
+                    <p class="highlight-message">
+                        No pressure. No expectations.
+                        <br>
+                        Just a little moment for you. ✨
+                    </p>
+
+                    <div class="card-decoration bottom-left">✧</div>
+                    <div class="card-decoration bottom-right">✦</div>
+
+                </div>
+
+                <button class="next-button" id="messageNext">
+                    <span>Keep going</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- MOOD BOOSTER SECTION -->
+        <!-- ========================= -->
+
+        <section class="screen mood-screen" id="moodScreen">
+
+            <div class="section-container">
+
+                <div class="section-label">
+                    <span>02</span>
+                    something for you
+                </div>
+
+                <h2 class="section-title">
+                    What do you need
+                    <span>right now?</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Pick whatever feels right.
+                    There are no wrong answers here.
+                </p>
+
+
+                <div class="mood-grid">
+
+                    <button class="mood-card" data-message="kindness">
+
+                        <div class="mood-icon">
+                            💌
+                        </div>
+
+                        <h3>
+                            A little kindness
+                        </h3>
+
+                        <p>
+                            I could use that
+                        </p>
+
+                    </button>
+
+
+                    <button class="mood-card" data-message="happiness">
+
+                        <div class="mood-icon">
+                            🌸
+                        </div>
+
+                        <h3>
+                            A little happiness
+                        </h3>
+
+                        <p>
+                            Make me smile
+                        </p>
+
+                    </button>
+
+
+                    <button class="mood-card" data-message="funny">
+
+                        <div class="mood-icon">
+                            😂
+                        </div>
+
+                        <h3>
+                            Something funny
+                        </h3>
+
+                        <p>
+                            Make me laugh
+                        </p>
+
+                    </button>
+
+
+                    <button class="mood-card" data-message="surprise">
+
+                        <div class="mood-icon">
+                            ✨
+                        </div>
+
+                        <h3>
+                            A tiny surprise
+                        </h3>
+
+                        <p>
+                            Surprise me
+                        </p>
+
+                    </button>
+
+                </div>
+
+
+                <!-- Dynamic message -->
+
+                <div
+                    class="response-container"
+                    id="responseContainer"
+                    aria-live="polite"
+                >
+
+                    <div class="response-icon" id="responseIcon">
+                        ✨
+                    </div>
+
+                    <p id="responseMessage">
+                        Choose one...
+                    </p>
+
+                </div>
+
+
+                <button class="next-button hidden" id="surpriseNext">
+                    <span>One more thing</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- FINAL SURPRISE SECTION -->
+        <!-- ========================= -->
+
+        <section class="screen surprise-screen" id="surpriseScreen">
+
+            <div class="surprise-content">
+
+                <div class="sparkle-title">
+                    ✦ one last thing ✦
+                </div>
+
+                <div class="big-heart">
+                    ♡
+                </div>
+
+                <h2>
+                    Still feeling a little sad?
+                </h2>
+
+                <p>
+                    Then I have one tiny surprise left.
+                </p>
+
+                <button
+                    class="surprise-button"
+                    id="sadButton"
+                >
+                    I'm still sad 😭
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- FINAL MESSAGE -->
+        <!-- ========================= -->
+
+        <section class="screen final-screen" id="finalScreen">
+
+            <div class="final-content">
+
+                <div class="final-sparkles">
+                    ✦　✧　✦
+                </div>
+
+                <div class="final-flower">
+                    🌷
+                </div>
+
+                <h2>
+                    Okay...
+                </h2>
+
+                <h1>
+                    One last thing. ❤️
+                </h1>
+
+                <div class="final-message">
+
+                    <p>
+                        I can't fix every bad day.
+                    </p>
+
+                    <p>
+                        And I won't pretend that I can
+                        magically make everything okay.
+                    </p>
+
+                    <p class="final-highlight">
+                        But I hope this little corner
+                        made your day just a tiny bit better.
+                    </p>
+
+                    <p>
+                        Take care of yourself, okay?
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="smile-button"
+                    id="smileButton"
+                >
+                    <span>Okay, I smiled :)</span>
+                    <span>♡</span>
+                </button>
+
+
+                <div
+                    class="final-response"
+                    id="finalResponse"
+                >
+                    I knew you could do it. ✨
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FLOATING PARTICLES CONTAINER -->
+    <!-- ============================= -->
+
+    <div
+        class="particles-container"
+        id="particlesContainer"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
